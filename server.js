@@ -11,8 +11,7 @@ app.use(bodyParser.json());
 // MongoDB Connection
 const mongoose = require('mongoose');
 
-// Substitua pela sua string de conexão do MongoDB Atlas
-const CONNECTION_STRING = 'mongodb+srv://aluno:QuimicAR@cluster0.nc4hk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const CONNECTION_STRING = process.env.MONGODB_URI;
 
 mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB Atlas'))
