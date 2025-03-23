@@ -42,6 +42,10 @@ app.get('/compostos/formato/:formato', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+    res.send('API está ativa :D');
+  });
+
 app.get('/compostos/nomenclatura/:nomenclatura', async (req, res) => {
   try {
     const composto = await Composto.findOne({ nomenclatura: req.params.nomenclatura });
@@ -57,5 +61,5 @@ app.get('/compostos/nomenclatura/:nomenclatura', async (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Servidor está sendo executado na porta:  ${PORT}`);
 });
