@@ -8,10 +8,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.json());
 
-
-
-
-const CONNECTION_STRING = process.env.MONGODB_URI;
+const CONNECTION_STRING = "mongodb+srv://aluno:QuimicAR@cluster0.nc4hk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB Atlas'))
