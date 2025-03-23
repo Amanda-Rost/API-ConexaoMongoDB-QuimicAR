@@ -8,8 +8,8 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.json());
 
-// MongoDB Connection
-const mongoose = require('mongoose');
+
+
 
 const CONNECTION_STRING = process.env.MONGODB_URI;
 
