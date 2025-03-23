@@ -1,4 +1,5 @@
-
+require('dotenv').config();
+console.log(process.env.CONNECTION_STRING);
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -9,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.json());
 
-const CONNECTION_STRING = "mongodb+srv://aluno:QuimicAR@cluster0.nc4hk.mongodb.net/QuimicAR";
+const CONNECTION_STRING = process.env.CONNECTION_STRING;
 
 mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB Atlas'))
@@ -29,7 +30,7 @@ const Composto = mongoose.model('Composto', CompostoSchema);
 // RESTful Endpoints
 app.get('/compostos/formato/:formato', async (req, res) => {
   try {
-    const composto = await Composto.findOne({ formato: req.params.formato });
+    const composto = await Composto.findOne({ formato: new RegExp(`^${req.params.formato}$`, 'i') });
     if (composto) {
       res.json(composto);
     } else {
