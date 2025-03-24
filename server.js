@@ -21,9 +21,9 @@ mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology:
 const CompostoSchema = new mongoose.Schema({
   formato: String,
   nomenclatura: String,
-  objeto3D: Buffer,
-  config3D: Buffer,
-  textura: Buffer
+  objeto3D: String,
+  config3D: String,
+  textura: String
 });
 
 const Composto = mongoose.model('Composto', CompostoSchema);
