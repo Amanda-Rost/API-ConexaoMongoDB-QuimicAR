@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "echo 'No build step required'",
-    "start:dev": "nodemon src/index.js",
+    "start:dev": "nodemon src/sever.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,11 +19,9 @@
   "author": "Amanda Rost",
   "license": "MIT",
   "dependencies": {
-    "apollo-server": "^3.13.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "graphql": "^16.11.0",
     "mongodb": "^6.15.0",
     "mongoose": "^8.12.2"
   },
