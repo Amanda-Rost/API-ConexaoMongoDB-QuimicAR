@@ -1,0 +1,42 @@
+POST http://localhost:3000/compostos
+Content-Type: application/json
+
+{
+    "user": "Mudar para que desejar",
+    "senha": "Mudar para que desejar",
+    "formato": "Mudar para que desejar",
+    "nomenclatura": "Mudar para que desejar",
+    "objeto3D": "Mudar para que desejar",
+    "config3D": "Mudar para que desejar",
+    "textura": "Mudar para que desejar"
+}
+
+###
+
+PUT http://localhost:3000/compostos/mudar-para-id-do-composto-que-quer-alterar
+Content-Type: application/json
+
+{
+    "user": "Mudar para que desejar",
+    "senha": "Mudar para que desejar",
+    "formato": "Mudar para que desejar",
+    "nomenclatura": "Mudar para que desejar",
+    "objeto3D": "Mudar para que desejar",
+    "config3D": "Mudar para que desejar",
+    "textura": "Mudar para que desejar"
+}
+
+###
+DELETE http://localhost:3000/compostos/mudar-para-id-do-composto-que-quer-excluir
+Content-Type: application/json
+
+{
+    "user": "Mudar para que desejar",
+    "senha": "Mudar para que desejar"
+}
+
+###
+GET http://localhost:3000/compostos/nomenclatura/colocar-por-qual-nomenclatura-quer-procurar
+
+###
+GET http://localhost:3000/compostos/formato/colocar-por-qual-formato-quer-procurar
