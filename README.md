@@ -6,6 +6,8 @@
 
  2. Instale o yarn (`npm install -g yarn`)
 
+ 3. Instalar extensão REST Client no seu vs code - Ele vai permitir que você use as rotas da API
+
 
 ## Para rodar: 
  - `yarn install` //ele vai instalar todas as dependencias que vocês precisaram pro projeto! 
