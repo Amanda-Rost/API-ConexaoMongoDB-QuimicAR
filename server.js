@@ -108,9 +108,9 @@ app.delete('/compostos/:id', async (req, res) => {
     try {
       const composto = await Composto.findByIdAndDelete(idComposto);
       if (composto) {
-        res.status(200).send('Composto deleted successfully');
+        res.status(200).send('Composto deletado com sucesso');
       } else {
-        res.status(404).send('Composto not found');
+        res.status(404).send('Composto não encontrado');
       }
     } catch (err) {
       res.status(500).send(err.message);
